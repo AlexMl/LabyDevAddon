@@ -1,19 +1,17 @@
-package org.example.core;
+package de.aubli.labymod.devaddon.core;
 
+import de.aubli.labymod.devaddon.core.commands.DevCommand;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
-import org.example.core.commands.ExamplePingCommand;
-import org.example.core.listener.ExampleGameTickListener;
 
 @AddonMain
-public class ExampleAddon extends LabyAddon<ExampleConfiguration> {
+public class DevAddon extends LabyAddon<ExampleConfiguration> {
 
   @Override
   protected void enable() {
     this.registerSettingCategory();
 
-    this.registerListener(new ExampleGameTickListener(this));
-    this.registerCommand(new ExamplePingCommand());
+    this.registerCommand(new DevCommand(this));
 
     this.logger().info("Enabled the Addon");
   }

@@ -4,16 +4,16 @@ plugins {
     id("net.labymod.gradle.addon")
 }
 
-group = "org.example"
+group = "de.aubli.labymod.devaddon"
 version = System.getenv().getOrDefault("VERSION", "1.0.0")
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "de.aubli.labymod.devaddon"
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "laby-dev-addon"
+        displayName = "LabyMod Dev Addon"
+        author = "AlexMl"
+        description = "Addon for developing"
         minecraftVersion = "*"
         version = getVersion().toString()
     }
