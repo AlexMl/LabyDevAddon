@@ -20,7 +20,7 @@ public class DevCommand extends Command {
 
   @Override
   public boolean execute(String s, String[] strings) {
-    this.displayMessage(Component.text("Use /dev pm <channel> <data>", NamedTextColor.AQUA));
+    this.displayMessage(Component.text("Use /dev <pm|binpm> <channel> <data>", NamedTextColor.AQUA));
     return true;
   }
 }
