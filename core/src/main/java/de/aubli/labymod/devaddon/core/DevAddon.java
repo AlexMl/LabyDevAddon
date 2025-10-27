@@ -5,7 +5,7 @@ import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
 
 @AddonMain
-public class DevAddon extends LabyAddon<ExampleConfiguration> {
+public class DevAddon extends LabyAddon<DevAddonConfig> {
 
   @Override
   protected void enable() {
@@ -17,7 +17,7 @@ public class DevAddon extends LabyAddon<ExampleConfiguration> {
   }
 
   @Override
-  protected Class<ExampleConfiguration> configurationClass() {
-    return ExampleConfiguration.class;
+  protected Class<DevAddonConfig> configurationClass() {
+    return DevAddonConfig.class;
   }
 }
